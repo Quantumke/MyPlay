@@ -1,0 +1,13 @@
+{% block header%} WELCOME 
+{% block content%}{%endblock%}
+
+
+
+{% if Dplay%}
+{% for t in Dplay%}
+{{ t.title}}
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+{%endblock%}
