@@ -18,6 +18,7 @@ from django.contrib import admin
 from clone import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^Dplay/view/(?P<slug>[^\.]+).html', views.view_more, name='view_more'),
+    url(r'^Dplay/(?P<slug>[^\.]+).html', views.view_more, name='view_more'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^(?P<slug>[\w\-]+)/$', views.view_more, name="vidz"),
 ]
