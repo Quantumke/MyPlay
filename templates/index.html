@@ -1,5 +1,8 @@
 {%extends "base.html"%}
 {%block content%} 
+
+
+		
   {% load staticfiles %}
   
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -12,7 +15,7 @@
 						<div class="resent-grid-img recommended-grid-img">
 {% if Dplay%}
 {% for d in  Dplay%}
-							<a href="{{post.get_absolute_url}}"><img src="{{d.thumbnail}}" alt="" /></a>
+							<a href="{{ d.get_absolute_url}}"><img src="{{d.thumbnail}}" alt="" /></a>
 							<div class="time">
 								<p>{{ d.date}}</p>
 							</div>
@@ -31,10 +34,11 @@
 <p>No VIdeos For this category</p>
 {%endif%}
 
-						</div>
+		
+				</div>
 					</div>
 				
-					
+			
 
 
 					<div class="clearfix"> </div>
@@ -1089,7 +1093,6 @@
 									<option value="UKR">Ukraine</option>
 									<option value="ARE">United Arab Emirates</option>
 									<option value="GBR">United Kingdom</option>
-
 									<option value="USA">United States</option>
 									<option value="UMI">United States Minor Outlying Islands</option>
 									<option value="URY">Uruguay</option>

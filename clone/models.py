@@ -18,4 +18,4 @@ class Dplay(models.Model):
 		return '%s' %self.title
 	@permalink
 	def get_absolute_url(self):
-		return('view_more', None, {'slug':slef.slug})
+		return('view_more', None, {'slug':self.slug})
