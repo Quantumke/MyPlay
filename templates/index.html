@@ -86,56 +86,48 @@
 
 
 								<li>
-
-									
-									<div class="animated-grids">
-	{% if popular%}
+{% if popular%}
 {% for p in popular%}
-										<div class="col-md-3 resent-grid recommended-grid slider-first">
+									
+<div class="animated-grids">
+	
+<div class="col-md-3 resent-grid recommended-grid slider-first">
 
 									
-											<div class="resent-grid-img recommended-grid-img">
+<div class="resent-grid-img recommended-grid-img">
 
-												<a href="{{p.get_absolute_url}}"><img src="{{p.thumbnail}}" alt="" /></a>
-												<div class="time small-time slider-time">
-													<p>{{ p.date}}</p>
-												</div>
-												<div class="clck small-clck">
-													<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-												</div>
-											</div>
-											<div class="resent-grid-info recommended-grid-info">
-												<h5><a href="single.html" class="title">{{p.title}}</a></h5>
-												<div class="slid-bottom-grids">
-													<div class="slid-bottom-grid">
-														<p class="author author-info"><a href="#" class="author">John Maniya</a></p>
-													</div>
-													<div class="slid-bottom-grid slid-bottom-right">
-														<p class="views views-info">{{p.views}}</p>
-													</div>
+		<a href="{{p.get_absolute_url}}"><img src="{{p.thumbnail}}" alt="" /></a>
+						<div class="time small-time slider-time">
+					        <p>{{ p.date}}</p>
+						</div>
+				<div class="clck small-clck">
+				<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+				</div>
+				</div>
+				<div class="resent-grid-info recommended-grid-info">
+				<h5><a href="single.html" class="title">{{p.title}}</a></h5>
+				<div class="slid-bottom-grids">
+				<div class="slid-bottom-grid">
+				<p class="author author-info"><a href="#" class="author">John Maniya</a></p>
+				</div>
+				<div class="slid-bottom-grid slid-bottom-right">
+				<p class="views views-info">{{p.views}}</p>
+				</div>
+
+				<div class="clearfix"> </div>
+                                               </div>
+		</div>
+						</div>
+
+</li>
+						</ul>
 
 
-											<div class="clearfix"> </div>
-
-	
-												</div>
-
-											</div>
-										</div>
-{%endfor%}
+						</div>
+					{%endfor%}
 {%else%}
 <p>No Post</p>
 {%endif%}
-		
-										
-								</li>
-						</ul>
-
-						</div>
-					</div>
-	
-				</div>
-
 	
 				<div class="recommended">
 					<div class="recommended-grids">
