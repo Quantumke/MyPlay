@@ -5,8 +5,9 @@ from clone.models import Dplay
 
 def index(request):
 	return render_to_response('index.html',{
-	'Dplay':Dplay.objects.all()[:3],
-	'animation':Dplay.objects.filter(category='animation')
+	'Dplay':Dplay.objects.order_by('-date')[:3],
+	'animation':Dplay.objects.filter(category='animation'),
+	'popular':Dplay.objects.filter(uploaded_by='Ben Kiboko')
 	})
 def view_more(request, slug):
 	return render_to_response('single.html',{
