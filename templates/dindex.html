@@ -1,0 +1,16 @@
+{% block header%} WELCOME 
+{% block content%}{%endblock%}
+
+
+
+{% if Dplay%}
+{% for t in Dplay%}
+{{ t.title}}
+{{t.description}}
+<img src='{{t.thumbnail}}'/>
+
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+{%endblock%}
