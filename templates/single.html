@@ -1,15 +1,17 @@
-{%extends "base.html"%}
+{% extends 'base.html'%}
 {% block content%}
 
  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<div class="show-top-grids">
 				<div class="col-sm-8 single-left">
+
+
 					<div class="song">
 						<div class="song-info">
-							<h3>Etiam molestie nisl eget consequat pharetra</h3>	
+							<h3>{{post.title}}</h3>	
 					</div>
 						<div class="video-grid">
-							<iframe src="https://www.youtube.com/embed/rKS6x1a8B_4?feature=player_detailpage" allowfullscreen></iframe>
+							<iframe src="{{post.video}}" allowfullscreen></iframe>
 						</div>
 					</div>
 					<div class="song-grid-right">
@@ -48,9 +50,10 @@
 							<div class="load_more">	
 								<ul id="myList">
 									<li>
-										<h4>Published on 15 June 2015</h4>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+										<h4>Published on &nbsp;  {{post.date}}</h4>
+										<p>{{post.description}}.</p>
 									</li>
+
 									<li>
 										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
 										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
@@ -674,5 +677,7 @@
 	</div>
  
     <script src="js/bootstrap.min.js"></script>
+
+
 {% endblock %}
 
