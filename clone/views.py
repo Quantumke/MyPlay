@@ -25,6 +25,10 @@ def hindi(request):
         return render_to_response('hindi.html',{
         'hindi':Dplay.objects.filter(channel='hindi')
         })
+def animation(request):
+	return render_to_response('animation.html',{
+	'animation':Dplay.objects.filter(channel='animation')
+	})
 
 def view_more(request, slug):
 	return render_to_response('single.html',{
