@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^(?P<slug>[\w\-]+)/$', views.view_more, name="vidz"),
     url('^english.html/', views.english, name='english'),
+    url('^chinese.html/', views.chinese, name='chinese'),
+    url('^hindi.html/', views.hindi, name='hindi'),
+
 ]
