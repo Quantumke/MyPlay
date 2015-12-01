@@ -6,7 +6,7 @@ from clone.models import Dplay
 
 def index(request):
 	return render_to_response('index.html',{
-	'Dplay':Dplay.objects.order_by('-date')[:3],
+	'Dplay':Dplay.objects.filter(category="Top").order_by('-date')[:3],
 	'animation':Dplay.objects.filter(category='animation')[:4],
 	'popular':Dplay.objects.filter(uploaded_by='Ben Kiboko')[:4],
 	'recommended':Dplay.objects.filter(views__gt=1000)[:4],
