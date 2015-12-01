@@ -24,5 +24,6 @@ urlpatterns = [
     url('^english.html/', views.english, name='english'),
     url('^chinese.html/', views.chinese, name='chinese'),
     url('^hindi.html/', views.hindi, name='hindi'),
+    url('^animation.html/', views.animation, name='animation'),
 
 ]
