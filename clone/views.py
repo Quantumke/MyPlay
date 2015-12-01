@@ -17,6 +17,10 @@ def english(request):
  	return render_to_response('english.html',{
 	'english':Dplay.objects.filter(channel='English')
 	})
+def chinese(request):
+	return render_to_response('chinese.html',{
+	'chinese':Dplay.objects.filter(channel='chinese')
+	})
 def view_more(request, slug):
 	return render_to_response('single.html',{
 	'post':get_object_or_404(Dplay, slug=slug)
