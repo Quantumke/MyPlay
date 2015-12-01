@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^watch/(?P<slug>[^\.]+).html', views.view_more, name='view_more'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^(?P<slug>[\w\-]+)/$', views.view_more, name="vidz"),
+    url('^blockbusters/', views.index, name='blockbusters'),
 ]
